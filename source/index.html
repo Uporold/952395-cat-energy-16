@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link type="text/css" href="css/normalize.css" rel="stylesheet" media="all">
     <link type="text/css" href="css/style.css" rel="stylesheet" media="all">
 </head>
@@ -11,19 +13,21 @@
 <body>
 
     <header class="page-header">
-        <div class="page-header__wrapper container">
+        <div class="page-header__wrapper page-header__wrapper--background container">
             <a class="page-header__logo">
+                <picture>
                 <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img class="page-header__cat-img" src="img/logo-mobile-cat.svg" width="33" height="38" alt="Кэт энерджи">
-                <img class="page-header__logo-img" src="img/logo-mobile-header.svg" width="101" height="18" alt="Кэт энерджи лого">
-            </a>
+                
+                <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи лого">
+            </picture>
+                    </a>
         
         <nav class="main-nav main-nav--opened">
             <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
             <ul class="main-nav__list site-list">
-                <li class="site-list__item site-list__item--active">
+                <li class="site-list__item site-list__item--active site-list__item--active-white">
                     <a class="site-list__link">Главная</a>
                 </li>
                 <li class="site-list__item">
@@ -41,9 +45,9 @@
             <div class="intro__wrapper">
                 <h2 class="intro__title">Функциональное питание для котов</h2>
                 <p class="intro__para">Занялся собой? Займись котом!</p>
-                <div class="intro-img-wrap">
+                <div class="intro__img-wrap">
                     <img class="intro__img" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Кэт энерджи">
-                    <a class="btn intro__btn" href="#">Подобрать программу</a>
+                    <a class="btn btn--intro" href="#">Подобрать программу</a>
                 </div>
 
             </div>
@@ -63,8 +67,8 @@
                 </div>
                 <div class="programs__item">
                     <h2 class="programs__item-title programs__item-title--pro">Набор массы</h2>
-                    <p class="programs__item-text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-                    <a class="programs__item-link" href="catalog-pro.html">
+                    <p class="programs__item-text programs__item-text--pro">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+                    <a class="programs__item-link programs__item-link--pro" href="catalog-pro.html">
                         Каталог Pro
                     </a>
                 </div>
@@ -75,49 +79,51 @@
             <div class="about__wrapper">
                 <h2 class="about__title">Как это работает</h2>
                 <ul class="about__list">
-                    <li class="about__item">
+                    <li class="about__item about__item--1">
                         <p class="about__text about__text--1">Функциональное питание содержит только полезные питательные вещества.</p>
                     </li>
-                    <li class="about__item">
+                    <li class="about__item about__item--2">
                         <p class="about__text about__text--2">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
                     </li>
-                    <li class="about__item">
+                    <li class="about__item about__item--3">
                         <p class="about__text about__text--3">Замените один-два приема обычной еды на наше функциональное питание.</p>
                     </li>
-                    <li class="about__item">
-                        <p class="about__text about__text--4">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+                    <li class="about__item about__item--4">
+                        <p class="about__text about__text--4">Уже через месяц наслаждайтесь <br> изменениями к лучшему <br> вашего питомца!</p>
                     </li>
                 </ul>
             </div>
         </section>
 
         <section class="example">
-            <div class="">
+            
                 <h2 class="example__title">Живой пример</h2>
 
                 <div class="example__wrapper">
 
                     <section class="example__info">
                         <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+                        <div class ="example__item-cost-wrapper">
                         <div class="example__item-wrapper">
                             <div class="example__item">
                                 <p class="example__item-value">5 кг</p>
-                                <p class="example__item-type">Снижение веса</p>
+                                <p class="example__item-type example__item-type--weight">Снижение веса</p>
                             </div>
 
                             <div class="example__item">
                                 <p class="example__item-value">60 дней</p>
-                                <p class="example__item-type">Затрачено времени</p>
+                                <p class="example__item-type example__item-type--time">Затрачено времени</p>
                             </div>
                         </div>
-                        <p class="example__cost"> Затраты на питание: 15 000 руб.</p>
+                        <p class="example__cost"> Затраты на питание:             15 000 руб.</p>
+                            </div>
 
 
                     </section>
 
                     <section class="example__slider"></section>
 
-                </div>
+                
             </div>
         </section>
 
@@ -128,7 +134,8 @@
             <div class="map-contacts__info">
                 <div class="map-contacts__info-wrapper">
                     <h2 class="map-contacts__info-tittle ">Приглашаем к сотрудничеству дилеров!</h2>
-                    <p class="map-contacts__info-text ">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+                    <p class="map-contacts__info-text ">ул. Большая Конюшенная, д. 19/8 
+                        Санкт-Петербург</p>
                 </div>
             </div>
         </div>
@@ -136,8 +143,8 @@
 
     </section>
 
-    <footer class="container page-footer">
-        <div class="page-footer__wrapper">
+    <footer class="page-footer">
+        <div class="page-footer__wrapper  container">
             <a class="page-footer__logo">
                 <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи лого">
             </a>
@@ -173,24 +180,8 @@
     </footer>
 
 
-    <script>
-        var navMain = document.querySelector('.main-nav');
-        var navToggle = document.querySelector('.page-header__toggle');
-
-
-
-        navToggle.addEventListener('click', function() {
-            if (navMain.classList.contains('main-nav--closed')) {
-                navMain.classList.remove('main-nav--closed');
-                navMain.classList.add('main-nav--opened');
-            } else {
-                navMain.classList.add('main-nav--closed');
-                navMain.classList.remove('main-nav--opened');
-            }
-        });
-    </script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="../source/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
