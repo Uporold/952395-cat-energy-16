@@ -6,6 +6,7 @@
 	border: none;
 	position: absolute;
 	top: 76px;
+  z-index: -1;
 }
 
 .map-contacts {
@@ -14,11 +15,12 @@
 	position: relative;
 
 	height: 476px;
+  z-index: 1;
 }
 
 .map-contacts__info {
 	background-color: @bg-white;
-	position: absolute;
+	//position: absolute;
 }
 
 .map-contacts__info-wrapper {
@@ -35,6 +37,7 @@
 
 .map-contacts__info--grey {
 	background-color: @bg-lightgrey;
+  
 }
 
 .map-contacts__info-tittle {
@@ -69,6 +72,9 @@
 		height: 400px;
 		margin-bottom: 0;
 	}
+  .map-contacts__info{
+    width: 100%;
+  }
 
 	.map-contacts__info-wrapper {
 		box-sizing: border-box;
@@ -103,7 +109,7 @@
 
 	.map-contacts__info-city {
 		display: block;
-		margin-top: 18px;
+		margin-top: 19px;
 	}
 }
 
@@ -122,6 +128,8 @@
 
 	.map-contacts__info {
 		margin-top: 95px;
+    width: 570px;
+    position: absolute;
 	}
 
 
