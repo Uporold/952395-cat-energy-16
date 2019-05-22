@@ -15,8 +15,8 @@
 	bottom: 205px;
 	left: 259px;
 
-	&::before,
-	&::after {
+	&::after,
+	&::before {
 		content: "";
 		position: absolute;
 		top: 23px;
@@ -35,8 +35,8 @@
 		transform: rotate(-45deg);
 	}
 
-	&:active::before,
-	&:active::after {
+	&:active::after,
+	&:active::before {
 		background-color: rgba(255, 255, 255, 0.3);
 	}
 }
@@ -62,7 +62,6 @@
 	text-transform: uppercase;
 	color: black;
 }
-
 @media (min-width: @tablet-width) {
 	.main-nav {
 		width: 438px;
@@ -101,7 +100,6 @@
 		white-space: nowrap;
 	}
 }
-
 @media (min-width: @desktop-width) {
 	.main-nav {
 		width: 477px;
@@ -109,7 +107,7 @@
 	}
 
 	.site-list {
-		margin-left: 0px;
+		margin-left: 0;
 		width: 477px;
 	}
 

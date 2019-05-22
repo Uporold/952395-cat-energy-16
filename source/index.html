@@ -71,7 +71,7 @@
 				<h2 class="intro__title">Функциональное питание для котов</h2>
 				<p class="intro__para">Занялся собой? Займись котом!</p>
 				<div class="intro__img-wrap">
-					<img class="intro__img" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Кэт энерджи">
+					<img class="intro__img" src="img/index-can-mobile@1x.png" scrset="img/index-can-mobile@2x.png" alt="Кэт энерджи">
 					<a class="btn btn--intro" href="#">Подобрать программу</a>
 				</div>
 
@@ -126,9 +126,9 @@
 
 
 	<section class="example">
-
+<div class="example__title-wrapper">
 		<h2 class="example__title">Живой пример</h2>
-
+</div>
 		<div class="example__wrapper container">
 
 			<section class="example__info">
@@ -156,17 +156,17 @@
 
 					<div class="example__slider-image example__slider-image--before">
 						<picture>
-							<source media="(min-width: 1200px)" srcset="img/before-desktop@1x.png">
-							<source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-							<img class="example__slider-img example__slider-img--before" alt="Толстый кот" src="img/before-mobile@1x.png" width="320" height="240">
+							<source media="(min-width: 1200px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+							<source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+							<img class="example__slider-img example__slider-img--before" alt="Толстый кот" src="img/before-mobile@1x.png" scset="img/before-mobile@2x.png">
 						</picture>
 					</div>
 
 					<div class="example__slider-image example__slider-image--after">
 						<picture>
-							<source media="(min-width: 1200px)" srcset="img/after-desktop@1x.png">
-							<source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-							<img class="example__slider-img example__slider-img--after" alt="Худой кот" height="240" src="img/after-mobile@1x.png" width="320">
+							<source media="(min-width: 1200px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+							<source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+							<img class="example__slider-img example__slider-img--after" alt="Худой кот" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png">
 						</picture>
 					</div>
 				</div>
@@ -188,17 +188,20 @@
 
 
 
-	<section class="map-contacts ">
+	 <section class="map-contacts">
 		<div id="map" class="map"></div>
-		<div class="container">
+      
+		<div class="container--desktop">
 			<div class="map-contacts__info">
-				<div class="map-contacts__info-wrapper">
+				<div class="map-contacts__info-wrapper container">
 					<h2 class="map-contacts__info-tittle">Приглашаем <br> к сотрудничеству дилеров!</h2>
 					<p class="map-contacts__info-text">ул. Большая Конюшенная, д. 19/8
 						<span class="map-contacts__info-city">Санкт-Петербург</span></p>
 				</div>
 			</div>
-		</div>
+     </div>
+		
+      
 
 
 	</section>
