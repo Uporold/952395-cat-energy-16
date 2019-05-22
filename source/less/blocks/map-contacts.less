@@ -6,28 +6,25 @@
 	border: none;
 	position: absolute;
 	top: 76px;
+	z-index: -1;
 }
 
 .map-contacts {
-	background: url(../img/bg-map-mobile@1x.png) no-repeat 50% 50%;
-
+	background: url("../img/bg-map-mobile@1x.png") no-repeat 50% 50%;
 	position: relative;
-
 	height: 476px;
+	z-index: 1;
 }
 
 .map-contacts__info {
 	background-color: @bg-white;
-	position: absolute;
+	//position: absolute;
 }
 
 .map-contacts__info-wrapper {
 	display: flex;
 	justify-content: space-between;
-	padding-top: 15px;
-	padding-bottom: 12px;
-	padding-left: 19px;
-	padding-right: 10px;
+	padding: 15px 10px 12px 19px;
 	box-sizing: border-box;
 	width: 320px;
 	height: 114px;
@@ -43,7 +40,6 @@
 	line-height: 1.25;
 	text-transform: uppercase;
 	width: 125px;
-
 }
 
 .map-contacts__info-text {
@@ -55,19 +51,21 @@
 	color: @bg-greyish-brown;
 	width: 149px;
 }
-
 @media (min-width: @tablet-width) {
-
 	.map {
 		top: 200px;
 	}
 
 	.map-contacts {
-		background: url(../img/bg-map-tablet@1x.png) no-repeat 50% 100%;
+		background: url("../img/bg-map-tablet@1x.png") no-repeat 50% 100%;
 		padding-bottom: 200px;
 		position: relative;
 		height: 400px;
 		margin-bottom: 0;
+	}
+
+	.map-contacts__info {
+		width: 100%;
 	}
 
 	.map-contacts__info-wrapper {
@@ -76,10 +74,7 @@
 		height: 201px;
 		display: flex;
 		justify-content: space-between;
-		padding-top: 49px;
-		padding-bottom: 12px;
-		padding-left: 41px;
-		padding-right: 42px;
+		padding: 49px 42px 12px 41px;
 	}
 
 	.map-contacts__info-tittle {
@@ -98,32 +93,30 @@
 		font-weight: 400;
 		line-height: 1.25;
 		width: 155px;
-
 	}
 
 	.map-contacts__info-city {
 		display: block;
-		margin-top: 18px;
+		margin-top: 19px;
 	}
 }
-
 @media (min-width: @desktop-width) {
-
 	.map {
-		top: 0px;
+		top: 0;
 	}
 
 	.map-contacts {
-		background: url(../img/bg-map-tablet@1x.png) no-repeat 50% 100%;
-		padding-bottom: 0px;
+		background: url("../img/bg-map-tablet@1x.png") no-repeat 50% 100%;
+		padding-bottom: 0;
 		position: relative;
 		min-height: 400px;
 	}
 
 	.map-contacts__info {
 		margin-top: 95px;
+		width: 570px;
+		position: absolute;
 	}
-
 
 	.map-contacts__info--grey {
 		background-color: @bg-white;
@@ -135,23 +128,16 @@
 		height: 201px;
 		display: flex;
 		justify-content: space-between;
-		padding-top: 47px;
-		padding-bottom: 12px;
-		padding-left: 76px;
-		padding-right: 90px;
+		padding: 47px 90px 12px 76px;
 	}
-
-
 
 	.map-contacts__info-text {
 		text-align: left;
 	}
 
 	.map-contacts__info-city {
-
 		margin-top: 19px;
 	}
-
 
 	.map-contacts__info-tittle {
 		line-height: 1.25;

@@ -19,7 +19,7 @@ navToggle.addEventListener('click', function () {
 
 ymaps.ready(function () {
 	var myMap = new ymaps.Map('map', {
-			center: [59.93913800574294, 30.321521561386636],
+			center: [59.93905635443461,30.319621272460942],
 			zoom: 17
 		}, {
 			searchControlProvider: 'yandex#search'
@@ -30,19 +30,19 @@ ymaps.ready(function () {
 			'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
 		),
 
-		myPlacemarkWithContent = new ymaps.Placemark([59.93874546240775, 30.323177881614683], {
+		myPlacemarkWithContent = new ymaps.Placemark([59.938625680716555,30.323033042327896], {
 
 		}, {
 			// Опции.
 			// Необходимо указать данный тип макета.
 			iconLayout: 'default#imageWithContent',
 			// Своё изображение иконки метки.
-			iconImageHref: '../img/map-marker.png',
+			iconImageHref: '../img/map-pin.png',
 			// Размеры метки.
-			iconImageSize: [231, 190],
+			iconImageSize: [124, 106],
 			// Смещение левого верхнего угла иконки относительно
 			// её "ножки" (точки привязки).
-			iconImageOffset: [-54, -193],
+			iconImageOffset: [-50, -130],
 			// Смещение слоя с содержимым относительно слоя с картинкой.
 
 			// Макет содержимого.
