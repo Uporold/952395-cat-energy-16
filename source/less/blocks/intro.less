@@ -1,126 +1,128 @@
 @import "../variables";
 
-.intro {
-	background: url("../img/index-background-mobile@1x.jpg") no-repeat;
-	background-size: 320px 305px;
-	background-position: top;
-	margin-top: 0;
-	margin-bottom: 22px;
 
-	@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-		background-image: url("../img/index-background-mobile@2x.jpg");
-	}
+.intro {
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+  background-size: 320px 305px;
+  background-position: top;
+  margin-top: 0;
+  margin-bottom: 22px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .intro__wrapper {
-	position: relative;
-	text-align: center;
-	color: @bg-white;
-	z-index: 2;
+  position: relative;
+  text-align: center;
+  color: @white;
+  z-index: 2;
 }
 
 .intro__title {
-	font-size: 36px;
-	padding-top: 0;
-	font-weight: 400;
-	line-height: 1;
-	margin-top: 0;
-	padding-top: 27px;
-	margin-bottom: 18px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 0;
+  padding-top: 27px;
+  margin-bottom: 18px;
 }
 
 .intro__para {
-	font-weight: 400;
-	text-transform: uppercase;
-	font-size: 14px;
-	padding-bottom: 20px;
-	margin-bottom: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .intro__img {
-	margin-top: -138px;
-	margin-bottom: -3px;
+  margin-top: -138px;
+  margin-bottom: -3px;
 }
 
 .intro__img-wrap {
-	background-color: @bg-white;
-	margin-top: 140px;
-	padding-bottom: 0;
+  background-color: @white;
+  margin-top: 140px;
+  padding-bottom: 0;
 }
+
 @media (min-width: @tablet-width) {
-	.intro {
-		background: url("../img/index-can-tablet@1x.jpg") no-repeat;
-		padding-bottom: 529px;
-		background-size: 709px 609px;
-		background-position: 29px 221px;
+  .intro {
+    background: url("../img/index-can-tablet@1x.jpg") no-repeat;
+    padding-bottom: 529px;
+    background-size: 709px 609px;
+    background-position: 29px 221px;
     margin-bottom: 0;
 
-		@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-			background-image: url("../img/index-can-tablet@2x.jpg");
-			background-size: 709px auto;
-		}
-	}
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-can-tablet@2x.jpg");
+      background-size: 709px auto;
+    }
+  }
 
-	.intro__img {
-		display: none;
-	}
+  .intro__img {
+    display: none;
+  }
 
-	.intro__wrapper {
-		position: relative;
-		color: #111111;
-		text-align: left;
-		padding-left: 87px;
-	}
+  .intro__wrapper {
+    position: relative;
+    color: @black;
+    text-align: left;
+    padding-left: 87px;
+  }
 
-	.intro__title {
-		width: 415px;
-		font-size: 60px;
-		padding-top: 20px;
-		font-weight: 400;
-		line-height: 1;
-		margin-bottom: 38px;
-	}
+  .intro__title {
+    width: 415px;
+    font-size: 60px;
+    padding-top: 20px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 38px;
+  }
 
-	.intro__para {
-		text-transform: uppercase;
-		font-size: 20px;
-		padding-bottom: 0;
-		margin-bottom: 44px;
-	}
+  .intro__para {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 0;
+    margin-bottom: 44px;
+  }
 
-	.intro__img-wrap {
-		margin-top: 0;
-		padding-bottom: 0;
-		background-color: transparent;
-	}
+  .intro__img-wrap {
+    margin-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+  }
 }
 
 @media (min-width: @desktop-width) {
-	.intro {
-		background: url("../img/index-can-desktop@1x.png") no-repeat;
-		padding-bottom: 193px;
-		background-size: 552px 499px;
-		background-position: 491px 29px;
-		@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-			background-image: url("../img/index-can-desktop@2x.png");
-			background-size: 552px auto;
-		}
-	}
+  .intro {
+    background: url("../img/index-can-desktop@1x.png") no-repeat;
+    padding-bottom: 193px;
+    background-size: 552px 499px;
+    background-position: 491px 29px;
 
-	.intro__wrapper {
-		padding-top: 0;
-		padding-left: 81px;
-	}
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-can-desktop@2x.png");
+      background-size: 552px auto;
+    }
+  }
 
-	.intro__title {
-		padding-top: 109px;
-		margin-bottom: 39px;
-	}
+  .intro__wrapper {
+    padding-top: 0;
+    padding-left: 81px;
+  }
 
-	.intro__para {
-		text-transform: uppercase;
-		font-size: 20px;
-		padding-bottom: 0;
-		margin-bottom: 48px;
-	}
+  .intro__title {
+    padding-top: 109px;
+    margin-bottom: 39px;
+  }
+
+  .intro__para {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 0;
+    margin-bottom: 48px;
+  }
 }

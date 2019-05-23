@@ -1,7 +1,7 @@
 @import "../variables";
 
 .example {
-  background-color: @bg-lightgrey;
+  background-color: @grey;
   //padding-left: 20px;
   //padding-right: 20px;
 }
@@ -20,16 +20,16 @@
 
 .example__text {
   font-size: 14px;
-  font-family: Arial;
+  font-family: @arial;
   line-height: 1.29;
   width: 270px;
-  color: @bg-greyish-brown;
+  color: @darkgrey;
   margin-bottom: 25px;
 }
 
 .example__item {
   border-radius: 3px;
-  border: solid 1px @bg-grey;
+  border: solid 1px @grey-border;
   width: 124px;
   height: 56px;
 }
@@ -55,8 +55,8 @@
   line-height: 1;
   font-weight: 400;
   text-align: center;
-  background-color: @bg-lightgrey;
-  color: #444444;
+  background-color: @grey;
+  color: @darkgrey;
   width: 54px;
   margin-left: 17px;
   padding-left: 17px;
@@ -104,8 +104,8 @@
   width: 84px;
   height: 14px;
   border-radius: 6px;
-  background-color: #ffffff;
-  border: 1px solid #cdcdcd;
+  background-color: @white;
+  border: 1px solid @grey-border;
   box-sizing: border-box;
 }
 
@@ -114,7 +114,7 @@
   width: 35px;
   height: 6px;
   border-radius: 3px;
-  background-color: #68b738;
+  background-color: @green;
   cursor: pointer;
 }
 
@@ -127,7 +127,7 @@
   background-color: transparent;
 
   span {
-    font-family: Oswald;
+    font-family: @oswald;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 400;
@@ -146,9 +146,11 @@
     padding-right: 0;
   }
 }
+
 @media (min-width: @tablet-width) {
   .example {
-    background-color: @bg-white;
+    background-color: @white;
+    border-top: 1px solid @grey-border;
     padding-left: 0;
     padding-right: 0;
   }
@@ -164,6 +166,7 @@
     padding-top: 0;
     line-height: 1;
     margin-bottom: 64px;
+    margin-top: 43px;
   }
 
   .example__info {
@@ -173,10 +176,10 @@
 
   .example__text {
     font-size: 16px;
-    font-family: Arial;
+    font-family: @arial;
     line-height: 1.5;
     width: 677px;
-    color: #444444;
+    color: @darkgrey;
     margin-bottom: 53px;
   }
 
@@ -188,7 +191,7 @@
 
   .example__item {
     border-radius: 3px;
-    border: solid 1px @bg-grey;
+    border: solid 1px @grey-border;
     width: 162px;
     height: 72px;
   }
@@ -207,28 +210,23 @@
     line-height: 1;
     font-weight: 400;
     text-align: center;
-    background-color: @bg-white;
-    color: @bg-greyish-brown;
+    background-color: @white;
+    color: @darkgrey;
     padding-left: 6px;
     padding-right: 6px;
     box-sizing: border-box;
-    text-align: center;
-  }
-
-  .example__cost {
-    margin-bottom: 0;
   }
 
   .example__item-type--weight {
     width: 114px;
-    font-family: Arial;
+    font-family: @arial;
     font-size: 14px;
     margin-left: 22px;
   }
 
   .example__item-type--time {
     width: 142px;
-    font-family: Arial;
+    font-family: @arial;
     font-size: 14px;
     margin-left: 10px;
   }
@@ -242,6 +240,7 @@
     text-align: right;
     margin-top: 10px;
     padding-top: 0;
+    margin-bottom: 0;
   }
 
   .example__item-cost-wrapper {
@@ -249,7 +248,7 @@
   }
 
   .example__slider {
-    background-color: @bg-lightgrey;
+    background-color: @grey;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,7 +333,7 @@
       content: "";
       width: 8px;
       height: 8px;
-      background-color: @bg-green;
+      background-color: @green;
       border-radius: 50%;
       top: 12px;
       left: 12px;
@@ -356,19 +355,21 @@
     border-bottom: 1px dotted #cdcdcd;
   }
 }
+
 @media (min-width: @desktop-width) {
   .example {
-    background-color: @bg-lightgrey;
+    background-color: @grey;
+    border: none;
   }
 
   .example__title-wrapper {
-    padding-left: 40px;
-    background-color: @bg-white;
+    padding-left: 42px;
+    background-color: @white;
   }
 
   .example__title {
     padding-left: calc((100vw - 1320px) / 2);
-    padding-bottom: 75px;
+    padding-bottom: 76px;
     margin-bottom: 0;
   }
 
@@ -376,7 +377,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    background-color: @bg-lightgrey;
+    background-color: @grey;
     //padding-bottom: 34px;
     &::before {
       content: "";
@@ -385,7 +386,7 @@
       z-index: -1;
       width: 100vw;
       height: 100%;
-      background-color: @bg-lightgrey;
+      background-color: @grey;
       right: 0;
     }
   }
@@ -411,7 +412,7 @@
   }
 
   .example__item-type {
-    background-color: @bg-lightgrey;
+    background-color: @grey;
   }
 
   .example__cost {
