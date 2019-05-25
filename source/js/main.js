@@ -17,40 +17,70 @@ navToggle.addEventListener('click', function () {
 
 /* Карта */
 
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-      center: [59.93875488342123,30.323129601852422],
-      zoom: 17
+var myMap;
+
+var tablet_viewport = 768;
+var desktop_viewport = 1300;
+var placemarkImage = "../img/map-pin.png";
+
+window.addEventListener("resize", update);
+ymaps.ready(init);
+
+function init () {
+  myMap = new ymaps.Map('map', {
+    center: [59.93863106417265,30.3230545],
+    zoom: 18
     }, {
       searchControlProvider: 'yandex#search'
-    }),
-
-    // Создаём макет содержимого.
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-
-    myPlacemarkWithContent = new ymaps.Placemark([59.938625680716555,30.323033042327896], {
-
-    }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: 'default#imageWithContent',
-      // Своё изображение иконки метки.
-      iconImageHref: '../img/map-pin.png',
-      // Размеры метки.
-      iconImageSize: [124, 106],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-50, -130],
-      // Смещение слоя с содержимым относительно слоя с картинкой.
-
-      // Макет содержимого.
-      iconContentLayout: MyIconContentLayout
     });
 
-  myMap.geoObjects
-    .add(myPlacemarkWithContent);
+  update();
+}
 
+function update() {
+  var mapCenter;
+  var placemark;
+  var placemarkSize;
+  var placemarkOfset;
+  var mapZoom;
 
-});
+  var viewport = window.innerWidth;
+
+  if (viewport < tablet_viewport) {
+    placemarkSize = [62, 53];
+    placemarkOfset = [-31, -43];
+    mapCenter = [59.93863106417265,30.3230545];
+    placemark = [59.93863106417265,30.3230545];
+    mapZoom = 17;
+  }
+  else if (viewport < desktop_viewport) {
+    placemarkSize = [124, 106];
+    placemarkOfset = [-61, -85];
+    mapCenter = [59.93863106417265,30.3230545];
+    placemark = [59.93863106417265,30.3230545];
+    mapZoom = 18;
+  }
+
+  else {
+    placemarkSize = [124, 106];
+    placemarkOfset = [-57, -95];
+    mapCenter = [59.93863106417265,30.319449611083996];
+    placemark = [59.93863106417265,30.3230545];
+    mapZoom = 17;
+  }
+
+  myMap.setCenter(mapCenter, mapZoom, 'map');
+
+  var myPlacemark = new ymaps.Placemark(placemark, {
+      hintContent: "ул. Большая Конюшенная 19/8, Санкт-Петербург",
+    }, {
+      iconLayout: "default#image",
+      iconImageHref: placemarkImage,
+      iconImageSize: placemarkSize,
+      iconImageOffset: placemarkOfset
+    }
+  );
+
+  myMap.geoObjects.removeAll();
+  myMap.geoObjects.add(myPlacemark);
+}
