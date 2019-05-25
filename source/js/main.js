@@ -19,7 +19,7 @@ navToggle.addEventListener('click', function () {
 
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
-      center: [59.93905635443461,30.319621272460942],
+      center: [59.93875488342123,30.323129601852422],
       zoom: 17
     }, {
       searchControlProvider: 'yandex#search'
@@ -54,7 +54,3 @@ ymaps.ready(function () {
 
 
 });
-
-  if (window.innerWidth < 768){
-  myMap.center = [158.93863106417265,30.3230545];
-}

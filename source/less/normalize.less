@@ -4,8 +4,6 @@
 
 html {
   font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 //  Remove default margin.
 
@@ -91,8 +89,8 @@ h1 {
 //  * Address styling not present in IE 8/9.
 
 mark {
-  background: #ff0;
-  color: #000;
+  background: #fff000;
+  color: #000000;
 }
 //  * Address inconsistent and variable font size in all browsers.
 
@@ -136,7 +134,6 @@ figure {
 //  * Address differences between Firefox and other browsers.
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -151,7 +148,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 // Forms ==========================================================================
@@ -191,7 +188,6 @@ select {
 
 button,
 html input[type="button"] {
-  -webkit-appearance: button;
   cursor: pointer;
 }
 //  * Re-set default cursor for disabled elements.
@@ -215,7 +211,6 @@ input {
 
   &[type="reset"],
   &[type="submit"] {
-    -webkit-appearance: button;
     cursor: pointer;
   }
   // * It's recommended that you don't attempt to style these elements.
@@ -239,17 +234,10 @@ input {
   // * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
   // * 2. Address `box-sizing` set to `border-box` in Safari and Chrome (include `-moz` to future-proof).
   &[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     //  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
     //  * Safari (but not Chrome) clips the cancel button when the search input has
     //  * padding (and `textfield` appearance).
-    &::-webkit-search-cancel-button,
-    &::-webkit-search-decoration {
-      -webkit-appearance: none;
-    }
   }
 }
 //  * Define consistent border, margin, and padding.

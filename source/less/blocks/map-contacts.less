@@ -23,7 +23,10 @@
 
 .map-contacts__info {
   background-color: @white;
-  //position: absolute;
+
+  &--grey {
+    background-color: @grey;
+  }
 }
 
 .map-contacts__info-wrapper {
@@ -33,10 +36,6 @@
   box-sizing: border-box;
   width: 320px;
   height: 114px;
-}
-
-.map-contacts__info--grey {
-  background-color: @grey;
 }
 
 .map-contacts__info-tittle {
@@ -133,10 +132,10 @@
     margin-top: 95px;
     width: 570px;
     position: absolute;
-  }
 
-  .map-contacts__info--grey {
-    background-color: @white;
+    &--grey {
+      background-color: @white;
+    }
   }
 
   .map-contacts__info-wrapper {
