@@ -41,21 +41,21 @@ function update() {
   var mapCenter;
   var placemark;
   var placemarkSize;
-  var placemarkOfset;
+  var placemarkOffset;
   var mapZoom;
 
   var viewport = window.innerWidth;
 
   if (viewport < tablet_viewport) {
     placemarkSize = [62, 53];
-    placemarkOfset = [-31, -43];
+    placemarkOffset = [-31, -43];
     mapCenter = [59.93863106417265,30.3230545];
     placemark = [59.93863106417265,30.3230545];
     mapZoom = 17;
   }
   else if (viewport < desktop_viewport) {
     placemarkSize = [124, 106];
-    placemarkOfset = [-61, -85];
+    placemarkOffset = [-61, -85];
     mapCenter = [59.93863106417265,30.3230545];
     placemark = [59.93863106417265,30.3230545];
     mapZoom = 18;
@@ -63,7 +63,7 @@ function update() {
 
   else {
     placemarkSize = [124, 106];
-    placemarkOfset = [-57, -95];
+    placemarkOffset = [-57, -95];
     mapCenter = [59.93863106417265,30.319449611083996];
     placemark = [59.93863106417265,30.3230545];
     mapZoom = 17;
@@ -77,7 +77,7 @@ function update() {
       iconLayout: "default#image",
       iconImageHref: placemarkImage,
       iconImageSize: placemarkSize,
-      iconImageOffset: placemarkOfset
+      iconImageOffset: placemarkOffset
     }
   );
 
