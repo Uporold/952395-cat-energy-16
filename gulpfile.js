@@ -78,8 +78,8 @@ gulp.task("js", function() {
     base: "source"
     })
     .pipe(uglify())
-    .pipe(rename("main.min.js"))
-    .pipe(gulp.dest("build/js"));
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("copy", function() {

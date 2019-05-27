@@ -151,6 +151,10 @@
     margin-bottom: 13px;
     user-select: none;
     cursor: pointer;
+    
+    &:active {
+      opacity: 0.3;
+    }
 
     &::before {
       content: "";
@@ -162,6 +166,10 @@
       height: 28px;
       border: 1px solid #ededed;
       border-radius: 50%;
+    }
+    
+    &:hover::before {
+      border: 1px solid #bababa;
     }
   }
 
@@ -186,7 +194,7 @@
       height: 30px;
       border: 1px solid @grey-border;
     }
-
+    
     &:hover::before {
       border: 1px solid #bababa;
     }
@@ -205,6 +213,11 @@
   text-transform: uppercase;
   color: @darkgrey;
   outline: none;
+  
+  &:focus + .form-main__label--radio::before,
+  &:focus + .form-main__label--checkbox::before {
+    border: 1px solid #bababa;
+  }
 
   &--name {
     padding-left: 14px;

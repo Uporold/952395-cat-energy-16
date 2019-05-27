@@ -21,9 +21,9 @@ var myMap;
 
 var tablet_viewport = 768;
 var desktop_viewport = 1300;
-var placemarkImage = "../img/map-pin.png";
+var placemarkImage = '../img/map-pin.png';
 
-window.addEventListener("resize", update);
+window.addEventListener('resize', update);
 ymaps.ready(init);
 
 function init () {
@@ -72,9 +72,9 @@ function update() {
   myMap.setCenter(mapCenter, mapZoom, 'map');
 
   var myPlacemark = new ymaps.Placemark(placemark, {
-      hintContent: "ул. Большая Конюшенная 19/8, Санкт-Петербург",
+      hintContent: 'ул. Большая Конюшенная 19/8, Санкт-Петербург',
     }, {
-      iconLayout: "default#image",
+      iconLayout: 'default#image',
       iconImageHref: placemarkImage,
       iconImageSize: placemarkSize,
       iconImageOffset: placemarkOffset
