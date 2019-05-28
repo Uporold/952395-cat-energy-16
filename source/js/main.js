@@ -21,7 +21,7 @@ var myMap;
 
 var tablet_viewport = 768;
 var desktop_viewport = 1300;
-var placemarkImage = '../img/map-pin.png';
+var placemarkImage = 'img/map-pin.png';
 
 window.addEventListener('resize', update);
 ymaps.ready(init);

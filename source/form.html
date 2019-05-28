@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/style.min.css" rel="preload" as="style">
+  <link href="js/main.min.js" rel="preload" as="script">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link type="text/css" href="css/style.min.css" rel="stylesheet" media="all">
@@ -27,7 +29,7 @@
         </picture>
       </a>
 
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--closed main-nav--no-js">
         <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -211,7 +213,7 @@
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="page-footer__copyright-text">HTML Academy</p>
           <svg width="27" height="34">
-            <use xlink:href="img/sprite.svg#sprite-htmlacademy"></use>
+            <use xlink:href="#sprite-htmlacademy"></use>
           </svg>
         </a>
       </div>

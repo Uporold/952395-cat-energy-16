@@ -53,7 +53,6 @@
 .extra__item-volume {
   display: inline-block;
   width: 120px;
-  /*height: 13px;*/
   font-family: @arial;
   font-size: 14px;
   font-weight: 400;
@@ -71,7 +70,6 @@
 
 .extra__item-price {
   display: inline-block;
-  /*height: 10px;*/
   font-family: @arial;
   font-size: 14px;
   font-weight: 400;
@@ -79,7 +77,6 @@
   letter-spacing: normal;
   text-align: right;
   color: @darkgrey;
-  //margin-left: 115px;
 }
 
 .extra__item {
@@ -94,11 +91,12 @@
 .extra__special {
   position: relative;
   width: 280px;
-  height: 289px;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
   background-color: @green-bg;
   margin: 0 auto;
   margin-bottom: 35px;
+  padding-bottom: 42px;
+  background-size: cover;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -128,6 +126,7 @@
   line-height: 1.25;
   text-align: center;
   color: @white;
+  margin-bottom: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -142,7 +141,6 @@
     padding: 0 calc((100vw - 727px) / 2);
 
     span {
-      //margin-left: 194px;
       z-index: 100;
       padding-left: 38px;
       padding-right: 40px;
@@ -161,12 +159,11 @@
   }
 
   .extra__item {
+    width: 708px;
     box-sizing: border-box;
     padding-left: 38px;
     padding-right: 38px;
-    width: 708px;
-    height: 140px;
-    padding-bottom: 24px;
+    padding-bottom: 27px;
     padding-top: 25px;
     border: solid 1px @grey;
     margin-left: -1px;
@@ -199,7 +196,6 @@
   .extra__item-volume {
     display: inline-block;
     width: 134px;
-    /* height: 16px;*/
     font-family: @arial;
     font-size: 16px;
     font-weight: 400;
@@ -212,7 +208,7 @@
   .extra__item-price {
     display: inline-block;
     width: 44px;
-    /* height: 13px;*/
+    white-space: nowrap;
     font-family: @arial;
     font-size: 16px;
     font-weight: 400;
@@ -226,9 +222,11 @@
   .extra__special {
     position: relative;
     width: 708px;
-    height: 200px;
     background: url("../img/gift-photo-tablet@1x.jpg") no-repeat;
     margin-bottom: 76px;
+    padding-bottom: 67px;
+    background-color: @green-bg;
+    background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
@@ -249,7 +247,7 @@
   .extra__special-text {
     width: 165px;
     text-align: left;
-    margin-left: 424px;
+    margin-left: 423px;
     font-family: @arial;
     font-size: 16px;
     font-weight: 400;
@@ -267,7 +265,6 @@
     padding: 0 calc((100vw - 1320px) / 2);
 
     span {
-      //margin-left: 194px;
       padding-left: 40px;
     }
   }
@@ -279,12 +276,10 @@
   .extra__item {
     display: flex;
     justify-content: space-between;
-
     box-sizing: border-box;
     padding-left: 2px;
     padding-right: 0;
     width: 895px;
-    height: 73px;
     padding-top: 15px;
     padding-bottom: 16px;
     border: none;
@@ -350,9 +345,12 @@
   .extra__special {
     position: relative;
     width: 245px;
-    height: 289px;
     background: url("../img/gift-photo-desktop@1x.jpg") no-repeat;
     margin: 0;
+    padding-top: 187px;
+    padding-bottom: 42px;
+    background-color: @green-bg;
+    background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
@@ -372,7 +370,7 @@
 
   .extra__special-text {
     width: auto;
-    margin: 187px 0 0;
+    margin: 0 auto;
     text-align: center;
   }
 }

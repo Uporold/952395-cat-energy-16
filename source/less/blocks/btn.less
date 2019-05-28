@@ -3,6 +3,7 @@
 .btn {
   display: inline-block;
   box-sizing: border-box;
+  padding: 10px 15px 11px;
   color: @white;
   background-color: @green;
   font-weight: 400;
@@ -21,7 +22,6 @@
 
   &--intro {
     width: 280px;
-    height: 40px;
     font-size: 14px;
     line-height: 1.29;
     padding-top: 11px;
@@ -29,7 +29,6 @@
 
   &--shop-item {
     width: 280px;
-    height: 40px;
     font-size: 16px;
     line-height: 1.25;
     padding-top: 9px;
@@ -37,7 +36,6 @@
 
   &--grey-all {
     width: 280px;
-    height: 40px;
     font-size: 16px;
     line-height: 1.25;
     background-color: @grey;
@@ -56,56 +54,55 @@
 
   &--form {
     width: 280px;
-    height: 40px;
     font-size: 16px;
     border: none;
+    padding: 9px 15px 5px;
     margin-bottom: 22px;
   }
 
   @media (min-width: @tablet-width) {
     &--intro {
       width: 245px;
-      height: 52px;
       font-size: 20px;
       line-height: 1;
-      padding-top: 15px;
+      padding: 15px 15px 17px;
     }
 
     &--grey-all,
     &--shop-item {
       width: 249px;
-      height: 40px;
     }
 
     &--extra-item {
       width: 633px;
-      height: 40px;
     }
 
     &--form {
       width: 283px;
-      height: 52px;
       font-size: 20px;
+      padding: 13px 15px 12px;
       margin-bottom: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
+    &--intro {
+      padding: 16px 15px 16px;
+    }
+
     &--grey-all,
     &--shop-item {
       width: 169px;
-      height: 40px;
     }
 
     &--extra-item {
       width: 245px;
-      height: 40px;
       align-self: center;
     }
 
     &--form {
       width: 568px;
-      height: 52px;
+      padding: 13px 15px 13px;
     }
   }
 }
